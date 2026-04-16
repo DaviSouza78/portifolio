@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Davi Souza | Desenvolvedor Full Stack</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <div class="theme-toggle-wrapper" style="position: absolute; top: 1.5rem; right: 2rem; z-index: 100;">
+        <button id="dark-mode-toggle" class="badge" style="cursor: pointer; font-family: inherit; font-size: 1.2rem; background: rgba(128,128,128,0.2); border: 1px solid var(--glass-border); border-radius: 50%; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(4px);">🌓</button>
+    </div>
+
+    <canvas id="webgl-canvas"></canvas>
+
+    <div class="container">
+        <header class="hero-section">
+            <div class="hero-content gs-reveal">
+                <div class="avatar-container">
+                    <img src="Img/My_Face.jpeg" class="avatar" alt="Davi Souza">
+                </div>
+                <h1 class="glitch-text" data-text="Davi Souza">Davi Souza</h1>
+                <h2 class="role">Desenvolvedor Full Stack</h2>
+                <div class="contact-badges">
+                    <span class="badge">📍 Taubaté, SP</span>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=davisouza4404@gmail.com" target="_blank" class="badge link">📧 E-Mail</a>
+                    <a href="https://wa.me/5512991856420" target="_blank" class="badge link">📞 WhatsApp</a>
+                    <a href="https://www.linkedin.com/in/davi-souza-b7456b3aa" target="_blank" class="badge link">🔗 LinkedIn</a>
+                    <a href="https://github.com/DaviSouza78" target="_blank" class="badge link">📂 GitHub</a>
+                    <a href="Img/Currículo Davi Marcondes .pdf" download="Curriculo_Davi_Souza.pdf" class="badge link">📄 Baixar Currículo</a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="section-block gs-reveal">
+                <h3 class="section-title">Sobre Mim</h3>
+                <p class="summary-text glass-panel">
+                    Sou um estudante de Análise e Desenvolvimento de Sistemas apaixonado por tecnologia e resolução de problemas, com conhecimento prático em desenvolvimento utilizando Python, HTML e CSS. Além do meu foco técnico na criação de soluções e automações eficientes, desenvolvo constantemente minhas habilidades comportamentais através dos meus hobbies: sou um ávido jogador de RPG de mesa, como Dungeons & Dragons, e de jogos online competitivos, como Valorant e League of Legends. Acredito que o pensamento estratégico, o trabalho em equipe, a comunicação clara e a rápida tomada de decisão sob pressão exigidos por essas dinâmicas são diferenciais valiosos que aplico diretamente no desenvolvimento de software.
+                </p>
+            </section>
+
+            <section class="section-block">
+                <h3 class="section-title gs-reveal">Projetos em Destaque</h3>
+                <div class="projects-grid">
+                    <div class="project-card tilt-card gs-reveal" onclick="modalManager.open('modal-projeto')">
+                        <div class="card-inner">
+                            <h4>SenaiHERO</h4>
+                            <p>Jogo de ritmo Web.</p>
+                            <span class="view-more">Ver Detalhes ➔</span>
+                        </div>
+                    </div>
+                    <div class="project-card tilt-card gs-reveal" onclick="modalManager.open('modal-realimenta')">
+                        <div class="card-inner">
+                            <h4>ReAlimenta</h4>
+                            <p>App de combate ao desperdício alimentar.</p>
+                            <span class="view-more">Ver Detalhes ➔</span>
+                        </div>
+                    </div>
+                    <div class="project-card tilt-card gs-reveal" onclick="modalManager.open('modal-senaijogos')">
+                        <div class="card-inner">
+                            <h4>Jogos Senai</h4>
+                            <p>Plataforma de E-Commerce de Jogos.</p>
+                            <span class="view-more">Ver Detalhes ➔</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-block gs-reveal">
+                <h3 class="section-title">Certificações</h3>
+                <div id="certificados-grid" class="projects-grid">
+                    </div>
+            </section>
+
+            <section class="section-block gs-reveal">
+                <h3 class="section-title">Formação Acadêmica</h3>
+                <div class="timeline glass-panel">
+                    <div class="timeline-item">
+                        <h4>Senai Taubaté</h4>
+                        <p>Ensino Superior em Análise e Desenvolvimento de Sistemas</p>
+                        <span class="date">2026 – Presente</span>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Colégio COTET</h4>
+                        <p>Ensino Médio</p>
+                        <span class="date">2022 – 2025</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-block gs-reveal">
+                <h3 class="section-title">Tech Stack & Soft Skills</h3>
+                <ul class="skills-list">
+                    <li class="skill-tag">Python</li>
+                    <li class="skill-tag">JavaScript / TypeScript</li>
+                    <li class="skill-tag">Front-End (HTML/CSS)</li>
+                    <li class="skill-tag">Banco de Dados</li>
+                    <li class="skill-tag">Lógica de Programação</li>
+                    <li class="skill-tag">Trabalho em Equipe</li>
+                    <li class="skill-tag">Resolução de Problemas</li>
+                    <li class="skill-tag">Boa Comunicação</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 | Desenvolvido por Davi Souza</p>
+        </footer>
+    </div>
+
+    <div id="modal-certificado" class="modal">
+        <div class="modal-close" onclick="modalManager.close('modal-certificado')">&times;</div>
+        <img class="modal-img" id="img-certificado" alt="Certificado">
+        <div id="legenda-certificado" class="modal-caption"></div>
+    </div>
+
+    <div id="modal-projeto" class="modal">
+        <div class="modal-close" onclick="modalManager.close('modal-projeto')">&times;</div>
+        <div class="modal-content glass-panel">
+            <div class="social-post">
+                <div class="post-header">
+                    <img src="Img/My_Face.jpeg" class="post-avatar" alt="Avatar">
+                    <div class="post-meta">
+                        <strong>Davi Marcondes Paes de Souza</strong>
+                        <span>Desenvolvedor Full Stack</span>
+                    </div>
+                </div>
+                <div class="post-body">
+                    <p>Este projeto é uma plataforma web de jogo de ritmo criada para uma apresentação em sala de aula. Ele simula um jogo musical com trilhas e dificuldades variadas.</p>
+                    <p><strong>Stack:</strong> Construído usando tecnologias front-end modernas (HTML, CSS e JavaScript), projetado para alta performance e excelente usabilidade.</p>
+                </div>
+                <div class="post-gallery">
+                    <img src="Img/senaihero/telainicial.png" loading="lazy" alt="Projeto senaihero">
+                    <img src="Img/senaihero/dificuldade.png" loading="lazy" alt="dificuldades">
+                    <img src="Img/senaihero/gameplay.png" loading="lazy" alt="gameplay">
+                    <img src="Img/senaihero/winscreen.png" loading="lazy" alt="gameplay">
+                    <img src="Img/senaihero/fimdegame.png" loading="lazy" alt="gameover">
+                    <img src="Img/senaihero/config.png" loading="lazy" alt="configs">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-realimenta" class="modal">
+        <div class="modal-close" onclick="modalManager.close('modal-realimenta')">&times;</div>
+        <div class="modal-content glass-panel">
+            <div class="social-post">
+                <div class="post-header">
+                    <img src="Img/My_Face.jpeg" class="post-avatar" alt="Avatar">
+                    <div class="post-meta">
+                        <strong>Davi Marcondes Paes de Souza</strong>
+                        <span>Desenvolvedor Full Stack</span>
+                    </div>
+                </div>
+                <div class="post-body">
+                    <p>O <strong>ReAlimenta</strong> é um projeto de extensão focado no combate à insegurança alimentar. A plataforma atua como uma ponte entre instituições com excedente de alimentos e ONGs cadastradas, otimizando a logística de doações.</p>
+                    <p>O foco principal foi a criação de uma interface intuitiva para democratizar o acesso, permitindo cadastros rápidos e gestão visual de doações.</p>
+                    <p><strong>Stack:</strong> Desenvolvido com HTML5, CSS3 e JavaScript puro, priorizando acessibilidade e design responsivo.</p>
+                </div>
+                <div class="post-gallery">
+                    <img src="Img/realimenta/LoginRealimenta.png" loading="lazy" alt="Login">
+                    <img src="Img/realimenta/inirealimenta1.png" loading="lazy" alt="Dashboard">
+                    <img src="Img/realimenta/ResultadoRealimenta.png" loading="lazy" alt="Resultados">
+                    <img src="Img/realimenta/codrealimenta.png" loading="lazy" alt="Code Snippet">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-senaijogos" class="modal">
+        <div class="modal-close" onclick="modalManager.close('modal-senaijogos')">&times;</div>
+        <div class="modal-content glass-panel">
+            <div class="social-post">
+                <div class="post-header">
+                    <img src="Img/My_Face.jpeg" class="post-avatar" alt="Avatar">
+                    <div class="post-meta">
+                        <strong>Davi Marcondes Paes de Souza</strong>
+                        <span>Desenvolvedor Full Stack</span>
+                    </div>
+                </div>
+                <div class="post-body">
+                    <p>A plataforma <strong>Jogos Senai</strong> é um projeto focado em E-Commerce. Ele simula um mercado digital real, onde os usuários podem facilmente navegar por diferentes jogos, ver seus detalhes e interagir com o carrinho de compras.</p>
+                    <p><strong>Stack:</strong> Desenvolvido com HTML5, CSS3 e JavaScript puro, focando na navegação e visual dos produtos.</p>
+                </div>
+                <div class="post-gallery">
+                    <img src="Img/jogossenai/mainpage.png" loading="lazy" alt="Main Page">
+                    <img src="Img/jogossenai/exdepag.png" loading="lazy" alt="Product Page">
+                    <img src="Img/jogossenai/exdepag2.png" loading="lazy" alt="Product Page 2">
+                    <img src="Img/jogossenai/carrinho.png" loading="lazy" alt="Carrinho de compras">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
