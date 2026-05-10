@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Davi Souza | Desenvolvedor Full Stack</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
+
 <body>
     <div class="cursor"></div>
     <div class="cursor-follower"></div>
 
     <div class="theme-toggle-wrapper" style="position: absolute; top: 1.5rem; right: 2rem; z-index: 100;">
-        <button id="dark-mode-toggle" class="badge" style="cursor: pointer; font-family: inherit; font-size: 1.2rem; background: rgba(128,128,128,0.2); border: 1px solid var(--glass-border); border-radius: 50%; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(4px);">🌓</button>
+        <button id="dark-mode-toggle" class="badge"
+            style="cursor: pointer; font-family: inherit; font-size: 1.2rem; background: rgba(128,128,128,0.2); border: 1px solid var(--glass-border); border-radius: 50%; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(4px);">🌓</button>
     </div>
 
     <canvas id="webgl-canvas"></canvas>
@@ -31,11 +34,14 @@
                 <h2 class="role">Desenvolvedor Full Stack</h2>
                 <div class="contact-badges">
                     <span class="badge">📍 Taubaté, SP</span>
-                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=davisouza4404@gmail.com" target="_blank" class="badge link">📧 E-Mail</a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=davisouza4404@gmail.com" target="_blank"
+                        class="badge link">📧 E-Mail</a>
                     <a href="https://wa.me/5512991856420" target="_blank" class="badge link">📞 WhatsApp</a>
-                    <a href="https://www.linkedin.com/in/davi-souza-b7456b3aa" target="_blank" class="badge link">🔗 LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/davi-souza-b7456b3aa" target="_blank" class="badge link">🔗
+                        LinkedIn</a>
                     <a href="https://github.com/DaviSouza78" target="_blank" class="badge link">📂 GitHub</a>
-                    <a href="Img/Currículo Davi Marcondes .pdf" download="Curriculo_Davi_Souza.pdf" class="badge link">📄 Baixar Currículo</a>
+                    <a href="Img/Currículo Davi Marcondes .pdf" download="Curriculo_Davi_Souza.pdf"
+                        class="badge link">📄 Baixar Currículo</a>
                 </div>
             </div>
         </header>
@@ -44,7 +50,14 @@
             <section class="section-block gs-reveal">
                 <h3 class="section-title">Sobre Mim</h3>
                 <p class="summary-text glass-panel">
-                    Sou um estudante de Análise e Desenvolvimento de Sistemas apaixonado por tecnologia e resolução de problemas, com conhecimento prático em desenvolvimento utilizando Python, HTML e CSS. Além do meu foco técnico na criação de soluções e automações eficientes, desenvolvo constantemente minhas habilidades comportamentais através dos meus hobbies: sou um ávido jogador de RPG de mesa, como Dungeons & Dragons, e de jogos online competitivos, como Valorant e League of Legends. Acredito que o pensamento estratégico, o trabalho em equipe, a comunicação clara e a rápida tomada de decisão sob pressão exigidos por essas dinâmicas são diferenciais valiosos que aplico diretamente no desenvolvimento de software.
+                    Sou um estudante de Análise e Desenvolvimento de Sistemas apaixonado por tecnologia e resolução de
+                    problemas, com conhecimento prático em desenvolvimento utilizando Python, HTML e CSS. Além do meu
+                    foco técnico na criação de soluções e automações eficientes, desenvolvo constantemente minhas
+                    habilidades comportamentais através dos meus hobbies: sou um ávido jogador de RPG de mesa, como
+                    Dungeons & Dragons, e de jogos online competitivos, como Valorant e League of Legends. Acredito que
+                    o pensamento estratégico, o trabalho em equipe, a comunicação clara e a rápida tomada de decisão sob
+                    pressão exigidos por essas dinâmicas são diferenciais valiosos que aplico diretamente no
+                    desenvolvimento de software.
                 </p>
             </section>
 
@@ -72,13 +85,20 @@
                             <span class="view-more">Ver Detalhes ➔</span>
                         </div>
                     </div>
+                    <div class="project-card tilt-card gs-reveal" onclick="modalManager.open('modal-scopemaster')">
+                        <div class="card-inner">
+                            <h4>ScopeMaster</h4>
+                            <p>Sistema de gerenciamento de requisitos (Projeto Integrador)</p>
+                            <span class="view-more">Ver Detalhes ➔</span>
+                        </div>
+                    </div>
                 </div>
             </section>
 
             <section class="section-block gs-reveal">
                 <h3 class="section-title">Certificações</h3>
                 <div id="certificados-grid" class="projects-grid">
-                    </div>
+                </div>
             </section>
 
             <section class="section-block gs-reveal">
@@ -135,8 +155,10 @@
                     </div>
                 </div>
                 <div class="post-body">
-                    <p>Este projeto é uma plataforma web de jogo de ritmo criada para uma apresentação em sala de aula. Ele simula um jogo musical com trilhas e dificuldades variadas.</p>
-                    <p><strong>Stack:</strong> Construído usando tecnologias front-end modernas (HTML, CSS e JavaScript), projetado para alta performance e excelente usabilidade.</p>
+                    <p>Este projeto é uma plataforma web de jogo de ritmo criada para uma apresentação em sala de aula.
+                        Ele simula um jogo musical com trilhas e dificuldades variadas.</p>
+                    <p><strong>Stack:</strong> Construído usando tecnologias front-end modernas (HTML, CSS e
+                        JavaScript), projetado para alta performance e excelente usabilidade.</p>
                 </div>
                 <div class="post-gallery">
                     <img src="Img/senaihero/telainicial.png" loading="lazy" alt="Projeto senaihero">
@@ -162,9 +184,13 @@
                     </div>
                 </div>
                 <div class="post-body">
-                    <p>O <strong>ReAlimenta</strong> é um projeto de extensão focado no combate à insegurança alimentar. A plataforma atua como uma ponte entre instituições com excedente de alimentos e ONGs cadastradas, otimizando a logística de doações.</p>
-                    <p>O foco principal foi a criação de uma interface intuitiva para democratizar o acesso, permitindo cadastros rápidos e gestão visual de doações.</p>
-                    <p><strong>Stack:</strong> Desenvolvido com HTML5, CSS3 e JavaScript puro, priorizando acessibilidade e design responsivo.</p>
+                    <p>O <strong>ReAlimenta</strong> é um projeto de extensão focado no combate à insegurança alimentar.
+                        A plataforma atua como uma ponte entre instituições com excedente de alimentos e ONGs
+                        cadastradas, otimizando a logística de doações.</p>
+                    <p>O foco principal foi a criação de uma interface intuitiva para democratizar o acesso, permitindo
+                        cadastros rápidos e gestão visual de doações.</p>
+                    <p><strong>Stack:</strong> Desenvolvido com HTML5, CSS3 e JavaScript puro, priorizando
+                        acessibilidade e design responsivo.</p>
                 </div>
                 <div class="post-gallery">
                     <img src="Img/realimenta/LoginRealimenta.png" loading="lazy" alt="Login">
@@ -188,8 +214,11 @@
                     </div>
                 </div>
                 <div class="post-body">
-                    <p>A plataforma <strong>Jogos Senai</strong> é um projeto focado em E-Commerce. Ele simula um mercado digital real, onde os usuários podem facilmente navegar por diferentes jogos, ver seus detalhes e interagir com o carrinho de compras.</p>
-                    <p><strong>Stack:</strong> Desenvolvido com HTML5, CSS3 e JavaScript puro, focando na navegação e visual dos produtos.</p>
+                    <p>A plataforma <strong>Jogos Senai</strong> é um projeto focado em E-Commerce. Ele simula um
+                        mercado digital real, onde os usuários podem facilmente navegar por diferentes jogos, ver seus
+                        detalhes e interagir com o carrinho de compras.</p>
+                    <p><strong>Stack:</strong> Desenvolvido com HTML5, CSS3 e JavaScript puro, focando na navegação e
+                        visual dos produtos.</p>
                 </div>
                 <div class="post-gallery">
                     <img src="Img/jogossenai/mainpage.png" loading="lazy" alt="Main Page">
@@ -201,6 +230,32 @@
         </div>
     </div>
 
+    <div id="modal-scopemaster" class="modal">
+        <div class="modal-close" onclick="modalManager.close('modal-scopemaster')">&times;</div>
+        <div class="modal-content glass-panel">
+            <div class="social-post">
+                <div class="post-header">
+                    <img src="Img/My_Face.jpeg" class="post-avatar" alt="Avatar">
+                    <div class="post-meta">
+                        <strong>Davi Marcondes Paes de Souza</strong>
+                        <span>Desenvolvedor Full Stack</span>
+                    </div>
+                </div>
+                <div class="post-body">
+                    <p>O <strong>ScopeMaster</strong> é meu <strong>Projeto Integrador</strong> — um sistema completo de <em>Gerenciamento de Requisitos</em> voltado para análise, aprovação e acompanhamento de propostas de software dentro de empresas e equipes de desenvolvimento.</p>
+                    <p>A plataforma possui tela de login minimalista e um <strong>Painel Geral</strong> com KPIs em tempo real: Total de Requisitos, Aprovados, Pendentes e Rejeitados. Inclui módulos de <strong>Painel de Propostas</strong>, <strong>Fluxo de Ideias</strong>, <strong>Projetos Aprovados</strong>, <strong>Métricas de Aprovação</strong> e <strong>Autorização de Usuários</strong>.</p>
+                    <p><strong>Funcionalidades:</strong> classificação de requisitos (Funcional / Não Funcional), workflow de aprovação, vinculação a projetos (Sistema de Estoque, App de Entregas, Portal RH, E-commerce, CRM), barras de progresso por projeto e busca global.</p>
+                    <p><strong>Stack:</strong> Aplicação full-stack com tema escuro profissional, foco em produtividade do administrador e rastreabilidade de decisões — desenvolvida como entrega final do curso técnico no SENAI.</p>
+                </div>
+                <div class="post-gallery">
+                    <img src="Img/ScopeMaster/login.png" loading="lazy" alt="Tela de Login">
+                    <img src="Img/ScopeMaster/painel.png" loading="lazy" alt="Painel Geral">
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
+
 </html>
